@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unsere Ziele – Atabuy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(135deg, #0a0f2c, #142850, #27496d);
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+    .chart-container {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Die Welt zu einem schöneren Ort machen</h1>
+  <p>
+    Durch unsere Einkommen spenden wir an verschiedene Organisationen, um die Welt zu einem besseren Ort zu machen. 
+    Ja, du hast richtig gehört – wir wollen, dass die Welt ein friedlicher Ort wird. Deshalb setzen wir uns jedes Jahr neue Organisationen zum Spenden fest.
+    Zwei davon sind jedoch dauerhaft festgelegt: <strong>Leukämie</strong> und <strong>Baumpflanzung</strong>.
+  </p>
+  <p>
+    Organisation 3 und 4 werden von <strong>euch</strong> bestimmt! Bei jeder Bestellung könnt ihr <strong>zwei Prioritäten</strong> für eure Lieblingsorganisationen angeben. 
+    Die Spenden erfolgen <strong>transparent</strong> am Ende des Jahres. So bleibt alles fair und nachvollziehbar.
+  </p>
+
+  <div class="chart-container">
+    <canvas id="donutChart" width="400" height="400"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('donutChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Leukämie (40%)', 'Umwelt/Baumpflanzung (30%)', 'Organisation 3 (20%)', 'Organisation 4 (10%)'],
+        datasets: [{
+          data: [40, 30, 20, 10],
+          backgroundColor: ['#ffd700', '#90ee90', '#1e90ff', '#ff7f50'],
+          borderColor: '#0a0f2c',
+          borderWidth: 2
+        }]
+      },
+      options: {
+        plugins: {
+          legend: {
+            labels: {
+              color: 'white',
+              font: {
+                size: 14
+              }
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
