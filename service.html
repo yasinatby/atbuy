@@ -11,6 +11,7 @@
       box-sizing: border-box;
     }
     body {
+      height: 100vh;
       background: linear-gradient(135deg, #0a0f2c, #142850, #27496d);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: white;
@@ -18,90 +19,67 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px;
       text-align: center;
+      padding: 40px 20px;
     }
     h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 20px;
-      text-shadow: 0 0 15px rgba(0,0,0,0.4);
     }
     p {
       font-size: 1.2rem;
-      margin-bottom: 40px;
-      font-style: italic;
-      opacity: 0.9;
-    }
-    .service-options {
-      margin-bottom: 40px;
-    }
-    .service-options select, .service-options textarea {
-      width: 100%;
+      margin-bottom: 30px;
       max-width: 600px;
-      padding: 15px;
-      margin: 10px 0;
-      border: 2px solid #fff;
-      border-radius: 30px;
-      background-color: transparent;
-      color: white;
+    }
+    form {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      max-width: 500px;
+      width: 100%;
+    }
+    select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 10px;
       font-size: 1rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: white;
     }
-    .service-options select:focus, .service-options textarea:focus {
-      outline: none;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    select option {
+      background-color: #0a0f2c;
     }
-    .service-options button {
-      background: linear-gradient(135deg, #ffcc00, #ffaa00);
-      color: #0a0f2c;
-      padding: 15px 30px;
+    textarea::placeholder {
+      color: #ccc;
+    }
+    .submit-btn {
+      background-color: grey;
+      color: #ccc;
+      padding: 12px 25px;
       font-size: 1rem;
       font-weight: bold;
-      border-radius: 30px;
       border: none;
-      cursor: pointer;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .service-options button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+      border-radius: 30px;
+      cursor: not-allowed;
+      opacity: 0.6;
     }
   </style>
 </head>
 <body>
-  <h1>Unser Service – Was wir anbieten</h1>
-  <p>Wir bieten maßgeschneiderte Lösungen für Unternehmen, um ihre Technologiebedürfnisse zu decken. Unsere Dienstleistungen umfassen:</p>
-  <div class="service-options">
-    <p><strong>B2B Firmenhandys</strong></p>
-    <p><strong>Softwarelösungen</strong></p>
-    <p><strong>Individuelle Beratung und IT-Dienstleistungen</strong></p>
-    <p><strong>Nachhaltige Produktlösungen</strong></p>
-  </div>
+  <h1>Unser Serviceangebot</h1>
+  <p>Wir bieten individuelle Lösungen für Geschäftskunden (B2B), darunter Firmenhandys, Softwarelösungen und vieles mehr.</p>
 
-  <h2>Kontaktformular</h2>
-  <p>Wählen Sie die gewünschten Dienstleistungen aus und hinterlassen Sie uns eine Nachricht. Wir melden uns bei Ihnen, um Ihnen weiterzuhelfen!</p>
-
-  <form action="mailto:info@atabuy.de" method="post" enctype="text/plain">
-    <div class="service-options">
-      <label for="service">Wählen Sie eine Dienstleistung:</label>
-      <select id="service" name="service">
-        <option value="B2B Firmenhandys">B2B Firmenhandys</option>
-        <option value="Softwarelösungen">Softwarelösungen</option>
-        <option value="Individuelle Beratung und IT-Dienstleistungen">Individuelle Beratung und IT-Dienstleistungen</option>
-        <option value="Nachhaltige Produktlösungen">Nachhaltige Produktlösungen</option>
-      </select>
-    </div>
-    
-    <div class="service-options">
-      <label for="message">Ihre Nachricht:</label>
-      <textarea id="message" name="message" rows="6" placeholder="Ihre Nachricht..."></textarea>
-    </div>
-
-    <div class="service-options">
-      <button type="submit">Absenden</button>
-    </div>
+  <form>
+    <select>
+      <option>Firmenhandys</option>
+      <option>Software Lösungen</option>
+      <option>Support & Beratung</option>
+    </select>
+    <textarea rows="6" placeholder="Ihre Nachricht an uns..."></textarea>
+    <button class="submit-btn" disabled>Absenden, folgt in Kürze</button>
   </form>
 </body>
 </html>
