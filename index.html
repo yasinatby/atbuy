@@ -57,9 +57,61 @@
       transform: translateY(-3px);
       box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
     }
+
+    /* Hamburger Menü */
+    .menu-icon {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    .menu-icon div {
+      width: 30px;
+      height: 3px;
+      background-color: white;
+      margin: 6px 0;
+    }
+    .side-menu {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #0a0f2c;
+      padding-top: 60px;
+      transition: 0.3s;
+      z-index: 1000;
+    }
+    .side-menu a {
+      padding: 12px 30px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      color: white;
+      display: block;
+      transition: 0.2s;
+    }
+    .side-menu a:hover {
+      background-color: #1e2a45;
+    }
   </style>
 </head>
 <body>
+  <!-- Hamburger Menü -->
+  <div class="menu-icon" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Seitenmenü -->
+  <div id="sideMenu" class="side-menu">
+    <a href="ueber-uns.html">Über uns</a>
+    <a href="nachhaltigkeit.html">Warum Nachhaltigkeit</a>
+    <a href="ziele.html">Unsere Ziele</a>
+    <a href="agb.html">Unsere AGBs</a>
+  </div>
+
   <h1>Willkommen bei Atabuy</h1>
   <p class="slogan">Der nachhaltige Marktplatz der Zukunft</p>
 
@@ -68,5 +120,17 @@
     <a href="verkaufen.html">Verkaufen</a>
     <a href="service.html">Service</a>
   </div>
+
+  <script>
+    // Funktion zum Öffnen und Schließen des Menüs
+    function toggleMenu() {
+      const menu = document.getElementById('sideMenu');
+      if (menu.style.left === '0px') {
+        menu.style.left = '-250px';
+      } else {
+        menu.style.left = '0px';
+      }
+    }
+  </script>
 </body>
 </html>
