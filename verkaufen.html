@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verkaufen – Atabuy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0a0f2c, #142850, #27496d);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      width: 100%;
+      max-width: 400px;
+    }
+    label {
+      font-size: 1rem;
+      display: block;
+      margin: 10px 0;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+    button {
+      background: linear-gradient(135deg, #ffcc00, #ffaa00);
+      color: #0a0f2c;
+      padding: 12px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+    }
+  </style>
+</head>
+<body>
+  <h1>Verkaufe dein Produkt</h1>
+  <form action="https://formspree.io/f/yourformid" method="POST">
+    <!-- Feld für Modell -->
+    <label for="modell">Modell:</label>
+    <input type="text" id="modell" name="modell" required />
+
+    <!-- Feld für Marke -->
+    <label for="marke">Marke:</label>
+    <input type="text" id="marke" name="marke" required />
+
+    <!-- Feld für Zustand -->
+    <label for="zustand">Zustand:</label>
+    <input type="text" id="zustand" name="zustand" required />
+
+    <!-- Feld für Speicherplatz -->
+    <label for="speicherplatz">Speicherplatz:</label>
+    <input type="text" id="speicherplatz" name="speicherplatz" required />
+
+    <!-- Absenden Button -->
+    <button type="submit">Absenden</button>
+  </form>
+</body>
+</html>
