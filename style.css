@@ -52,22 +52,23 @@ nav a {
 }
 
 /* Hero-Section - Bild soll immer vollständig sichtbar sein */
+/* Hero-Bereich auf mobilen Geräten - das Bild bleibt immer sichtbar */
 .hero {
-    width: 100%; /* 100% Breite */
+    width: 100%; /* Bild über die volle Breite */
     position: relative;
-    height: 100vh; /* Höhe des Bildschirms */
+    height: 100vh; /* Die Höhe des Hero-Bereichs ist immer der gesamte Bildschirm */
     background-image: url('https://i.postimg.cc/6qWL9R3s/temp-Image-P2-EJ9p.avif');
-    background-size: cover;
-    background-position: center;
+    background-size: cover; /* Bild wird so angepasst, dass es den gesamten Bereich abdeckt */
+    background-position: center center; /* Bild bleibt zentriert */
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: rgb(1, 1, 1);
+    color: white;
   }
   
-  /* Sicherstellen, dass Header auch auf Smartphones gut aussieht */
+  /* Header - Die Navigation bleibt immer im gleichen Layout */
   header {
     width: 100%;
     background-color: white;
@@ -81,28 +82,28 @@ nav a {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   }
   
-  /* Anpassen des Logo-Textes */
+  /* Logo */
   .logo {
     font-size: 1.8rem;
     font-weight: bold;
     color: #0a0f2c;
   }
   
-  /* Navigation (Leisten links: Atabuy, rechts: Links zu den Seiten) */
+  /* Navigation */
   nav {
     display: flex;
     gap: 25px;
     align-items: center;
   }
   
-  /* Für die Links */
+  /* Navigation Links */
   nav a {
     text-decoration: none;
     color: #0a0f2c;
     font-weight: 500;
   }
   
-  /* Navigation-Buttons */
+  /* Schaltflächen */
   .btn-primary {
     background-color: #0a0f2c;
     color: white;
@@ -113,38 +114,35 @@ nav a {
     transition: background 0.3s ease;
   }
   
-  /* Hover-Effekte für Buttons */
+  /* Hover-Effekt für Buttons */
   .btn-primary:hover {
     background-color: #1a1f3c;
   }
   
-  /* Mobile Anpassungen - für Bild- und Header-Layout */
+  /* Mobile Anpassungen */
   @media (max-width: 768px) {
-    /* Hero Bildanpassung auf mobilen Geräten */
+    /* Hero-Bereich auf mobilen Geräten - das Bild bleibt sichtbar */
     .hero {
-      background-size: cover; /* Sicherstellen, dass das Bild weiterhin vollständig sichtbar ist */
-      height: 60vh; /* Anpassen der Höhe für mobile Geräte */
+      height: 60vh; /* Anpassen der Höhe für kleinere Bildschirme */
+      background-size: cover;
+      background-position: center center;
     }
   
-    /* Header: Navigation bleibt auch auf kleineren Geräten erhalten */
+    /* Header-Anpassungen */
     header {
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 15px;
+      padding: 10px 20px; /* Weniger Abstand auf kleinen Geräten */
+      flex-direction: row; /* Der Header bleibt als Zeile */
     }
   
     .logo {
-      font-size: 1.5rem;
+      font-size: 1.5rem; /* Kleinere Schriftgröße für das Logo */
     }
   
     nav {
       gap: 15px;
-      flex-direction: column; /* Links untereinander statt nebeneinander auf Smartphones */
-      margin-top: 10px;
+      flex-direction: row; /* Links bleiben in einer Zeile */
     }
   
-    /* Für die Links im Navigation-Bereich */
     nav a {
       font-size: 1rem;
     }
@@ -155,14 +153,14 @@ nav a {
     }
   }
   
-  /* Für sehr kleine Bildschirme wie Smartphones im Hochformat (bis 480px) */
+  /* Anpassungen für sehr kleine Bildschirme (bis 480px) */
   @media (max-width: 480px) {
-    /* Hero-Bereich weiter anpassen */
+    /* Hero-Bereich weiter optimieren */
     .hero {
-      height: 50vh; /* Noch kürzere Höhe für noch kleinere Geräte */
+      height: 50vh; /* Noch kürzere Höhe für sehr kleine Geräte */
     }
   
-    /* Navigation optimieren */
+    /* Navigation wird vertikal für sehr kleine Geräte */
     nav {
       flex-direction: column;
       align-items: center;
@@ -170,10 +168,15 @@ nav a {
     }
   
     .logo {
-      font-size: 1.3rem;
+      font-size: 1.3rem; /* Noch kleinere Schriftgröße für das Logo */
     }
   
     nav a {
+      font-size: 0.9rem;
+    }
+  
+    .btn-primary {
+      padding: 8px 16px;
       font-size: 0.9rem;
     }
   }
