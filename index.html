@@ -3,75 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atabuy – Innovative Elektroniklösungen</title>
+  <title>Atabuy – Beratung & Technik</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
   <header>
     <div class="logo">ATABUY</div>
     <nav>
-      <a href="index.html">Startseite</a>
-      <a href="service.html">Servie</a>
-      <a href="verkaufen.html">Verkauf</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="produkte.html" class="btn-primary">Shop</a>
+      <a href="#">Startseite</a>
+      <a href="#">Shop</a>
+      <a href="#">Kontakt</a>
+      <a href="#" class="btn-primary">Jetzt buchen</a>
     </nav>
   </header>
 
   <section class="hero">
-    <div class="hero-overlay">
-      <h1> &nbsp;
-      </h1>
-      <p> &nbsp; </p>
-     
+    <div class="word-loop">
+      <span>Kostenlose</span>
+      <span>Beratung</span>
+      <span>Buchen</span>
+    </div>
+    <a href="#services" class="btn-primary">Jetzt buchen</a>
+  </section>
+
+  <section class="marquee">
+    <p>🚀 Jetzt kostenlose Beratung buchen! Für eine bessere, nachhaltigere Technikwelt. 🚀</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2 data-aos="fade-up">Unsere Dienstleistungen</h2>
+    <div class="service-grid">
+      <div class="service" data-aos="fade-up" data-aos-delay="100">
+        <h3>Detaillierte Produktbewertungen</h3>
+        <p>Zuverlässige Einschätzungen durch Experten.</p>
+        <a href="#" class="btn-secondary">Mehr erfahren</a>
+      </div>
+      <div class="service" data-aos="fade-up" data-aos-delay="200">
+        <h3>Mobilgeräte-Optimierung</h3>
+        <p>Maßgeschneiderte Lösungen für Ihr Business.</p>
+        <a href="#" class="btn-secondary">Mehr erfahren</a>
+      </div>
+      <div class="service" data-aos="fade-up" data-aos-delay="300">
+        <h3>Premium TechGear-Service</h3>
+        <p>Erleben Sie Perfektion in Qualität und Design.</p>
+        <a href="#" class="btn-secondary">Mehr erfahren</a>
+      </div>
     </div>
   </section>
 
+  <footer class="footer">
+    <div class="follow-text">Folge uns auf Social Media</div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+  <section class="form-section" id="kontakt">
+    <h2>Kontaktformular</h2>
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Dein Name" disabled />
+  
+      <label for="email">E-Mail</label>
+      <input type="email" id="email" placeholder="Deine E-Mail-Adresse" disabled />
+  
+      <label for="message">Nachricht</label>
+      <textarea id="message" placeholder="Deine Nachricht..." disabled></textarea>
+  
+      <button type="submit" class="submit-btn" disabled>Absenden – folgt in Kürze</button>
+    </form>
+  </section>
+  
+  <section class="snake-marquee">
+    <p>🐍 Folge uns auf Social Media 🐍 Folge uns auf Social Media 🐍 Folge uns auf Social Media 🐍</p>
+  </section>
+  
+  <footer class="footer">
+    <p class="social-title">Folge uns auf Social Media</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
 </body>
 </html>
-<section id="services" class="services">
-  <h2>Unsere Dienstleistungen</h2>
-
-  <div class="service-grid">
-    <div class="service">
-      <h3>Detaillierte Produktbewertungen</h3>
-      <p>Zuverlässige Einschätzungen durch Experten liefern Ihnen umfassende Informationen und Empfehlungen zu den neuesten Elektronikprodukten. Profitieren Sie von unserer fundierten Analyse, um die besten Kaufentscheidungen zu treffen.</p>
-      <a href="#" class="btn-secondary">Mehr erfahren</a>
-    </div>
-
-    <div class="service">
-      <h3>Mobilgeräte-Optimierung</h3>
-      <p>Unsere Experten maximieren die Leistung und Langlebigkeit Ihrer Mobilgeräte. Vertrauen Sie auf maßgeschneiderte Lösungen für effizientes und sicheres Arbeiten unterwegs.</p>
-      <a href="#" class="btn-secondary">Mehr erfahren</a>
-    </div>
-
-    <div class="service">
-      <h3>Premium TechGear-Service</h3>
-      <p>Maßgeschneiderte Lösungen für Ihre Technologie-Bedürfnisse, kombiniert mit erstklassigem Zubehör. Erleben Sie Perfektion in Qualität und Design.</p>
-      <a href="#" class="btn-secondary">Mehr erfahren</a>
-    </div>
-  </div>
-</section>
-<section class="info-banner">
-
-  <div class="word-loop">
-    <span>Kostenlose</span>
-    <span>Beratung</span>
-    <span>Buchen</span>
-  </div>
-  
-
-  <div class="info-inner">
-    <a href="#" class="btn-primary">Jetzt buchen</a>
-  </div>
-
-  <div class="info-content">
-    <div class="info-left">
-      <h3><a href="#">Mehr über unsere Marke</a></h3>
-    </div>
-    <div class="info-right">
-      <p>Unser Unternehmen steht für höchste Qualität und innovative Lösungen im Bereich der Elektronik. Mit umfassender Expertise setzen wir Maßstäbe in der Branche und bieten unseren Kunden erstklassige Produkte und Dienstleistungen. <a href="#">Mehr erfahren</a>.</p>
-    </div>
-  </div>
-</section>
