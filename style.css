@@ -51,10 +51,11 @@ nav a {
     background-color: #1a1f3c;
 }
 
+/* Hero-Section - Bild soll immer vollständig sichtbar sein */
 .hero {
-    width: 100%; /* WICHTIG: Damit es sich über die volle Breite zieht */
+    width: 100%; /* 100% Breite */
     position: relative;
-    height: 100vh;
+    height: 100vh; /* Höhe des Bildschirms */
     background-image: url('https://i.postimg.cc/6qWL9R3s/temp-Image-P2-EJ9p.avif');
     background-size: cover;
     background-position: center;
@@ -64,7 +65,119 @@ nav a {
     justify-content: center;
     text-align: center;
     color: rgb(1, 1, 1);
-}
+  }
+  
+  /* Sicherstellen, dass Header auch auf Smartphones gut aussieht */
+  header {
+    width: 100%;
+    background-color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Anpassen des Logo-Textes */
+  .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0a0f2c;
+  }
+  
+  /* Navigation (Leisten links: Atabuy, rechts: Links zu den Seiten) */
+  nav {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  /* Für die Links */
+  nav a {
+    text-decoration: none;
+    color: #0a0f2c;
+    font-weight: 500;
+  }
+  
+  /* Navigation-Buttons */
+  .btn-primary {
+    background-color: #0a0f2c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  /* Hover-Effekte für Buttons */
+  .btn-primary:hover {
+    background-color: #1a1f3c;
+  }
+  
+  /* Mobile Anpassungen - für Bild- und Header-Layout */
+  @media (max-width: 768px) {
+    /* Hero Bildanpassung auf mobilen Geräten */
+    .hero {
+      background-size: cover; /* Sicherstellen, dass das Bild weiterhin vollständig sichtbar ist */
+      height: 60vh; /* Anpassen der Höhe für mobile Geräte */
+    }
+  
+    /* Header: Navigation bleibt auch auf kleineren Geräten erhalten */
+    header {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+  
+    .logo {
+      font-size: 1.5rem;
+    }
+  
+    nav {
+      gap: 15px;
+      flex-direction: column; /* Links untereinander statt nebeneinander auf Smartphones */
+      margin-top: 10px;
+    }
+  
+    /* Für die Links im Navigation-Bereich */
+    nav a {
+      font-size: 1rem;
+    }
+  
+    .btn-primary {
+      padding: 8px 16px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Für sehr kleine Bildschirme wie Smartphones im Hochformat (bis 480px) */
+  @media (max-width: 480px) {
+    /* Hero-Bereich weiter anpassen */
+    .hero {
+      height: 50vh; /* Noch kürzere Höhe für noch kleinere Geräte */
+    }
+  
+    /* Navigation optimieren */
+    nav {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  
+    .logo {
+      font-size: 1.3rem;
+    }
+  
+    nav a {
+      font-size: 0.9rem;
+    }
+  }
+  
 
 .hero h1 {
     font-size: 2.5rem;
