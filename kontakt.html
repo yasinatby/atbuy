@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt – Atabuy</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .kontakt-container {
+      max-width: 600px;
+      margin: 100px auto 40px;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .kontakt-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #0a0f2c;
+    }
+
+    .kontakt-container form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .kontakt-container input,
+    .kontakt-container textarea {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-family: inherit;
+    }
+
+    .kontakt-container textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .kontakt-container button {
+      background-color: grey;
+      color: #ccc;
+      padding: 12px 25px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 30px;
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">ATABUY</div>
+    <nav>
+      <a href="index.html">Startseite</a>
+      <a href="produkte.html">Shop</a>
+      <a href="service.html">Service</a>
+      <a href="kontakt.html">Kontakt</a>
+      <a href="#" class="btn-primary">Jetzt buchen</a>
+    </nav>
+  </header>
+
+  <main class="kontakt-container">
+    <h2>Kontaktiere uns</h2>
+    <form>
+      <input type="text" placeholder="Dein Name" required />
+      <input type="email" placeholder="Deine E-Mail-Adresse" required />
+      <input type="text" placeholder="Betreff" />
+      <textarea placeholder="Deine Nachricht an uns..."></textarea>
+      <button type="submit" disabled>Absenden, folgt in Kürze</button>
+    </form>
+  </main>
+
+</body>
+</html>
