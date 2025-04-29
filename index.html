@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Atabuy</title>
+  <title>Atabuy – Coming Soon</title>
   <style>
     * {
       margin: 0;
@@ -21,7 +21,7 @@
       justify-content: center;
       text-align: center;
       position: relative;
-      padding-bottom: 60px;
+      padding: 40px 20px;
     }
     h1 {
       font-size: 3rem;
@@ -29,39 +29,18 @@
       text-shadow: 0 0 15px rgba(0,0,0,0.4);
     }
     .slogan {
-      font-size: 1.1rem;
-      margin-bottom: 30px;
+      font-size: 1.2rem;
+      margin-bottom: 40px;
       font-style: italic;
       opacity: 0.9;
     }
-    .slogan a {
-      color: #ffffff;
-      text-decoration: underline;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .slogan a:hover {
-      color: #ffcc00;
-    }
-    .btn-container {
-      display: flex;
-      gap: 30px;
-    }
-    .btn {
-      padding: 15px 40px;
-      font-size: 1.2rem;
-      border: none;
+    .coming-soon {
+      font-size: 1rem;
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 12px 25px;
       border-radius: 30px;
-      background-color: #ffffff;
-      color: #142850;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-    }
-    .btn:hover {
-      transform: translateY(-5px);
-      background-color: #e6e6e6;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
     }
     .shop-link {
       position: absolute;
@@ -77,22 +56,14 @@
     .shop-link a:hover {
       text-decoration: underline;
     }
-    @media (max-width: 600px) {
-      .btn-container {
-        flex-direction: column;
-      }
-    }
   </style>
 </head>
 <body>
   <h1>Willkommen bei Atabuy</h1>
-  <p class="slogan"><a href="nachhaltigkeit.html">So geht nachhaltiger Handel</a></p>
-  <div class="btn-container">
-    <button class="btn" onclick="location.href='kaufen.html'">Kaufen</button>
-    <button class="btn" onclick="location.href='verkaufen.html'">Verkaufen</button>
-  </div>
+  <p class="slogan">Der nachhaltige Marktplatz der Zukunft</p>
+  <div class="coming-soon">🚧 Unsere Website wird gerade überarbeitet – <strong>Coming Soon!</strong></div>
   <div class="shop-link">
-    <p>Besuche unseren <a href="https://www.ebay.de/usr/atabuy_de" target="_blank">eBay-Shop</a></p>
+    <p>Bis dahin findest du uns auf <a href="https://www.ebay.de/usr/atabuy_de" target="_blank">eBay</a></p>
   </div>
 </body>
 </html>
