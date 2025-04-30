@@ -1,12 +1,13 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background: #f5f6fa;
   color: #0a0f2c;
   padding-top: 100px;
-}
-.spacer {
-  height: 0;
 }
 header {
   background: #fff;
@@ -55,6 +56,7 @@ nav a {
   overflow: hidden;
   position: relative;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 .word-loop span {
   position: absolute;
@@ -112,10 +114,6 @@ nav a {
   padding: 60px 20px;
   background: #ffffff;
   text-align: center;
-}
-.form-section h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
 }
 form {
   max-width: 500px;
