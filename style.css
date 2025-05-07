@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #f5f6fa;
-  color: #0a0f2c;
+  font-family: 'Open Sans', sans-serif;
+  background: #f4f5f7;
+  color: #333;
   padding-top: 100px;
 }
 
@@ -21,7 +21,7 @@ header {
   top: 0;
   width: 100%;
   z-index: 9999;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -37,7 +37,7 @@ nav a {
 }
 
 .btn-primary {
-  background: #0a0f2c;
+  background: #006f3f;
   color: #fff;
   padding: 10px 20px;
   border-radius: 25px;
@@ -56,44 +56,26 @@ nav a {
   color: white;
 }
 
-.word-loop {
+.hero-text h1 {
   font-size: 4rem;
-  font-weight: 900;
-  height: 100px;
-  overflow: hidden;
-  position: relative;
-  text-transform: uppercase;
-  margin-bottom: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.word-loop span {
-  position: absolute;
-  opacity: 0;
-  animation: wordFade 9s infinite;
-}
-
-.word-loop span:nth-child(1) { animation-delay: 0s; }
-.word-loop span:nth-child(2) { animation-delay: 3s; }
-.word-loop span:nth-child(3) { animation-delay: 6s; }
-
-@keyframes wordFade {
-  0% { opacity: 0; transform: translateY(100%); }
-  10%, 30% { opacity: 1; transform: translateY(0); }
-  40% { opacity: 0; transform: translateY(-100%); }
-  100% { opacity: 0; }
+.hero-text p {
+  font-size: 1.6rem;
+  font-weight: 300;
 }
 
 .marquee {
-  background: #8EB6DC;
-  color: #0a0f2c;
+  background: #006f3f;
+  color: #fff;
   padding: 15px;
   font-weight: bold;
-  overflow: hidden;
-  white-space: nowrap;
+  text-align: center;
 }
 
 .marquee p {
-  display: inline-block;
   animation: scroll-left 15s linear infinite;
 }
 
@@ -102,11 +84,10 @@ nav a {
   100% { transform: translateX(-100%); }
 }
 
-/* Services Section */
 .services {
   padding: 80px 40px;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 .service-grid {
@@ -114,13 +95,12 @@ nav a {
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
-  margin-top: 40px;
 }
 
 .service {
-  background-color: #ffffff;
+  background-color: #f9f9f9;
   border-radius: 15px;
-  padding: 20px;
+  padding: 30px;
   width: 280px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
@@ -133,111 +113,52 @@ nav a {
 .service h3 {
   font-size: 1.6rem;
   font-weight: bold;
-  margin-bottom: 15px;
 }
 
 .service p {
   font-size: 1rem;
   color: #666;
-  margin-bottom: 15px;
-}
-
-.btn-secondary {
-  display: inline-block;
-  margin-top: 10px;
-  background: #0a0f2c;
-  color: #fff;
-  padding: 8px 20px;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background-color: #1a1f3c;
-}
-
-.form-section {
-  padding: 60px 20px;
-  background: #ffffff;
-  text-align: center;
-}
-
-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-textarea {
-  resize: none;
-  height: 120px;
 }
 
 .submit-btn {
   padding: 12px;
   border-radius: 25px;
   border: none;
-  background: gray;
-  color: #ccc;
-  font-size: 1rem;
+  background: #006f3f;
+  color: white;
+  font-size: 1.1rem;
   font-weight: bold;
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
-/* Snake Marquee */
-.snake-marquee {
-  overflow: hidden;
-  background: #0a0f2c;
-  color: #ffffff;
-  font-weight: 900;
-  font-size: 2.5rem;
-  padding: 30px 0;
-  white-space: nowrap;
-  text-align: center;
+.submit-btn:hover {
+  background-color: #004b2f;
 }
 
-.snake-marquee p {
-  display: inline-block;
-  animation: snake-scroll 16s linear infinite;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-}
-
-@keyframes snake-scroll {
-  0% { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-
-/* Footer */
 .footer {
-  text-align: center;
-  padding: 40px 20px;
   background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
 }
 
-.footer .follow-text {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 15px;
+.footer .footer-links a {
+  margin: 0 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.footer .footer-links a:hover {
+  color: #006f3f;
 }
 
 .social-icons a {
-  color: #0a0f2c;
+  color: #333;
   font-size: 1.5rem;
   margin: 0 10px;
-  transition: color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #1a1f3c;
+  color: #006f3f;
 }
